@@ -38,3 +38,21 @@ ligne	type de a
 
 (* [list_sum] attend un predicat en premier argument
    donc les lignes 5 et 9 sont mal typees *)
+   
+   (* Question 2.3 *)
+
+type 'a arbre_binaire =
+  | Feuille
+  | Noeud of 'a * 'a arbre_binaire * 'a arbre_binaire
+
+let rec map_arbre (arbre : 'a arbre_binaire) (f : 'a -> 'b) : 'b arbre_binaire =
+  match arbre with
+  | Feuille -> Feuille
+  | Noeud (a, gauche, droite) ->
+      Noeud (f a, map_arbre gauche f, map_arbre droite f)
+
+let rec forall_arbre (arbre : 'a arbre_binaire) (p : 'a -> bool) : bool =
+  match arbre with
+  | Feuille -> true
+  | Noeud (a, gauche, droite) ->
+      p a && forall_arbre gauche p && forall_arbre droite p
