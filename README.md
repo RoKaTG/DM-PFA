@@ -39,3 +39,6 @@ Le fichier `ex5.ml` contient l'implémentation de la tortue. Pour compiler et la
 ```bash
 ocamlc -o exo5 exo5.ml
 ```
+Notez que pour l'exercice 5, vous pouvez également utiliser utop pour interagir avec la tortue directement dans la console.
+
+Bon travail !
