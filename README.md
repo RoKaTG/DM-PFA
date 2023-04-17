@@ -35,7 +35,7 @@ ocamlc -o exo4 exo4.ml
 ## Exercice 5 : Tortue
 Cet exercice porte sur la programmation d'une tortue dans un langage de programmation très simple représenté en OCAML.
 
-Le fichier `ex5.ml` contient l'implémentation de la tortue. Pour compiler et lancer le programme, utilisez :
+Le fichier `exo5.ml` contient l'implémentation de la tortue. Pour compiler et lancer le programme, utilisez :
 ```bash
 ocamlc -o exo5 exo5.ml
 ```
